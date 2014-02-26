@@ -67,48 +67,979 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 17, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@keyframes spin {
+  /* line 33, ../sass/_spinners.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 34, ../sass/_spinners.scss */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* line 9, ../sass/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
   min-height: 100%;
   font-size: 100% Helvetica, sans-serif;
-  background-color: #efefef;
+  background-color: white;
+  color: #323232;
+  font-family: AllerLight;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-/* line 37, ../sass/screen.scss */
-.slide {
-  background: #e2e2e2;
+/* line 27, ../sass/screen.scss */
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
-  height: 100%;
+  height: 44px;
+  z-index: 1000;
+  -webkit-transition: background 600ms ease-out;
+  -moz-transition: background 600ms ease-out;
+  -ms-transition: background 600ms ease-out;
+  -o-transition: background 600ms ease-out;
+  transition: background 600ms ease-out;
+}
+/* line 41, ../sass/screen.scss */
+header div.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 10px;
+  height: 24px;
+}
+/* line 47, ../sass/screen.scss */
+header div.wrapper .logo_black {
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 52, ../sass/screen.scss */
+header div.wrapper .logo_black img {
+  position: relative;
+  top: 0px;
+}
+/* line 59, ../sass/screen.scss */
+header .navigation {
+  position: relative;
+  top: -24px;
+  float: right;
+}
+/* line 64, ../sass/screen.scss */
+header .navigation li {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #223020;
+  font-family: Aller;
+  font-size: 18px;
+  padding: 0px 10px;
+}
+/* line 79, ../sass/screen.scss */
+header .navigation li:hover, header .navigation li.active {
+  color: white;
+}
+/* line 86, ../sass/screen.scss */
+header a#pull {
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 100%;
+  margin: 5px 0 2px 5px;
+  background: #323232;
+  color: #c8c8c8;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  z-index: 5;
+}
+
+/* line 101, ../sass/screen.scss */
+header.down {
+  background-color: #323232;
+}
+/* line 106, ../sass/screen.scss */
+header.down div.wrapper .logo_black img {
+  top: -24px;
+}
+/* line 111, ../sass/screen.scss */
+header.down div.wrapper li {
+  color: #c8c8c8;
+}
+/* line 114, ../sass/screen.scss */
+header.down div.wrapper li:hover, header.down div.wrapper .active {
+  color: #999999;
+}
+
+/* line 120, ../sass/screen.scss */
+h1, h2, h3, h4 {
+  font-family: MuseoBold;
+}
+
+/* line 126, ../sass/screen.scss */
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  line-height: 55px;
+}
+
+/* line 131, ../sass/screen.scss */
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+
+/* line 136, ../sass/screen.scss */
+.transparent {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 139, ../sass/screen.scss */
+.cutCornerBottomRight {
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  right: 10px;
+  display: block;
+  background: #ed2171;
+  font-family: Aller;
+  color: #dbdada;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 46, ../sass/_base.scss */
+.cutCornerBottomRight:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-width: 0px 0px 20px 20px;
+  border-style: solid;
+  border-color: transparent white white transparent;
+}
+
+/* line 154, ../sass/screen.scss */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 157, ../sass/screen.scss */
+.spinner {
+  animation: spin 1.5s linear 0 infinite alternate;
+  /* Safari and Chrome: */
+  -webkit-animation: spin 1.5s linear 0 infinite normal;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+/* line 13, ../sass/_spinners.scss */
+.spinner:after {
+  content: "";
+  width: 85%;
+  height: 85%;
+  background: -webkit-linear-gradient(45deg, white 0%, white 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-5%, -5%);
+}
+/* line 24, ../sass/_spinners.scss */
+.spinner.moon {
+  border-left: 0;
+  border-top: 0;
+}
+/* line 25, ../sass/_spinners.scss */
+.spinner.moon:after {
+  display: none;
+}
+
+/* line 165, ../sass/screen.scss */
+.section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 1px 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
+}
+/* line 174, ../sass/screen.scss */
+.section .wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1280px;
+  margin-top: 60px;
+  min-height: 100%;
+  padding: 20px;
+}
+/* line 181, ../sass/screen.scss */
+.section .wrapper .sub_sites {
+  position: relative;
+}
+/* line 184, ../sass/screen.scss */
+.section .wrapper .sub_sites .cutButton {
+  top: -15px;
+}
+/* line 190, ../sass/screen.scss */
+.section .wrapper ul {
+  line-height: 24px;
+}
+/* line 194, ../sass/screen.scss */
+.section .wrapper .statements {
+  position: relative;
+  text-align: center;
+  color: #323232;
+  font-family: MuseoBold;
+  font-size: 20px;
+}
+/* line 203, ../sass/screen.scss */
+.section .wrapper .statements .one, .section .wrapper .statements .two, .section .wrapper .statements .three {
   position: relative;
 }
 
-/* line 43, ../sass/screen.scss */
-.navigation {
-  position: fixed;
+/* line 211, ../sass/screen.scss */
+#section_home {
+  background-image: url(../../images/bg_top2.jpg);
+  background-size: cover;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+}
+/* line 220, ../sass/screen.scss */
+#section_home .gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q0ZDQ4YyIgc3RvcC1vcGFjaXR5PSIwLjg5Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ1JSIgc3RvcC1jb2xvcj0iI2U3ZTdjMCIgc3RvcC1vcGFjaXR5PSIwLjY5Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(212, 212, 140, 0.89) 0%, rgba(231, 231, 192, 0.69) 45%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(212, 212, 140, 0.89)), color-stop(45%, rgba(231, 231, 192, 0.69)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(212, 212, 140, 0.89) 0%, rgba(231, 231, 192, 0.69) 45%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(212, 212, 140, 0.89) 0%, rgba(231, 231, 192, 0.69) 45%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(212, 212, 140, 0.89) 0%, rgba(231, 231, 192, 0.69) 45%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(212, 212, 140, 0.89) 0%, rgba(231, 231, 192, 0.69) 45%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3d4d48c', endColorstr='#00ffffff',GradientType=0 );
+  /* IE6-8 */
+}
+/* line 240, ../sass/screen.scss */
+#section_home .wrapper {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   z-index: 1;
-  top: 20px;
+  margin: 0px;
+  padding: 0px;
 }
-
-/* line 48, ../sass/screen.scss */
-.navigation li:hover, .active {
-  font-size: 25px;
-  cursor: pointer;
-  width: 100px !important;
-}
-
-/* line 53, ../sass/screen.scss */
-.envatologo {
-  position: fixed;
+/* line 250, ../sass/screen.scss */
+#section_home .wrapper .logo {
+  position: relative;
   top: 50%;
-  left: 50%;
+  margin: -105px auto 0;
+}
+/* line 255, ../sass/screen.scss */
+#section_home .wrapper .tagline {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  text-shadow: 0 0 15px #c4c782;
+  color: #323232;
+  font-family: Aller;
+  font-size: 20px;
+}
+
+/* line 273, ../sass/screen.scss */
+#section_about .wrapper .cutButton {
+  top: -15px;
+}
+/* line 277, ../sass/screen.scss */
+#section_about .wrapper .photos {
+  position: relative;
+  margin-top: 40px;
+  height: 400px;
+}
+/* line 282, ../sass/screen.scss */
+#section_about .wrapper .photos .device {
+  position: absolute;
+}
+/* line 285, ../sass/screen.scss */
+#section_about .wrapper .photos .laptop {
   z-index: 1;
-  width: 446px;
-  margin-top: -41px;
-  margin-left: -223px;
+}
+/* line 288, ../sass/screen.scss */
+#section_about .wrapper .photos .desktop {
+  z-index: 2;
+}
+/* line 291, ../sass/screen.scss */
+#section_about .wrapper .photos .tablet {
+  z-index: 3;
+}
+
+/* line 301, ../sass/screen.scss */
+#section_connect .client_container {
+  background: url(../../images/client_bg.png) repeat 0 0 transparent;
+}
+/* line 304, ../sass/screen.scss */
+#section_connect .client_container .wrapper {
+  overflow: hidden;
+}
+/* line 307, ../sass/screen.scss */
+#section_connect .client_container .wrapper .statements {
+  margin: 20px 0 30px 0;
+}
+/* line 311, ../sass/screen.scss */
+#section_connect .client_container .wrapper .col {
+  width: 32%;
+  float: left;
+  text-align: center;
+}
+/* line 316, ../sass/screen.scss */
+#section_connect .client_container .wrapper .col.one, #section_connect .client_container .wrapper .col.two {
+  border-right: 2px solid #b5b5b5;
+}
+/* line 322, ../sass/screen.scss */
+#section_connect .wrapper .statements {
+  margin: 50px 0;
+}
+/* line 324, ../sass/screen.scss */
+#section_connect .wrapper .statements span {
+  display: inline-block;
+}
+/* line 330, ../sass/screen.scss */
+#section_connect .wrapper .statements.contact {
+  text-align: left;
+}
+/* line 332, ../sass/screen.scss */
+#section_connect .wrapper .statements.contact span {
+  display: inline-block;
+  margin-right: 50px;
+  text-align: left;
+}
+/* line 338, ../sass/screen.scss */
+#section_connect .wrapper .statements.contact i.email {
+  font-size: 30px;
+}
+/* line 342, ../sass/screen.scss */
+#section_connect .wrapper .statements.contact i.phone {
+  font-size: 40px;
+}
+/* line 347, ../sass/screen.scss */
+#section_connect .wrapper a {
+  color: #323232;
+}
+
+/* For the largest possible displays - Defaults that may change later */
+@media (max-width: 10000px) {
+  /* line 4, ../sass/_device.scss */
+  a#pull {
+    display: none;
+  }
+
+  /* line 7, ../sass/_device.scss */
+  .logo_black {
+    width: 162px;
+  }
+
+  /* line 10, ../sass/_device.scss */
+  .cutButton {
+    padding: 8px 8px 6px;
+    width: 180px;
+    font-size: 15px;
+  }
+  /* line 15, ../sass/_device.scss */
+  .cutButton i {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  /* line 21, ../sass/_device.scss */
+  .section .wrapper {
+    margin-top: 80px;
+  }
+  /* line 24, ../sass/_device.scss */
+  .section .wrapper .logo {
+    width: 366px;
+  }
+  /* line 29, ../sass/_device.scss */
+  .section .wrapper .tagline,
+  .section .wrapper .statements {
+    display: block;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    margin: 40px 0 80px;
+  }
+  /* line 36, ../sass/_device.scss */
+  .section .wrapper .tagline span,
+  .section .wrapper .statements span {
+    position: relative;
+  }
+
+  /* line 42, ../sass/_device.scss */
+  #section_home .tagline {
+    margin: 0px;
+  }
+
+  /* line 48, ../sass/_device.scss */
+  #section_about .wrapper .statements {
+    margin: 0px;
+  }
+  /* line 52, ../sass/_device.scss */
+  #section_about .wrapper .photos .device {
+    bottom: 0px;
+  }
+  /* line 55, ../sass/_device.scss */
+  #section_about .wrapper .photos .laptop {
+    width: 502px;
+    left: 10%;
+    bottom: 20px;
+  }
+  /* line 60, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    width: 446px;
+    left: 40%;
+  }
+  /* line 64, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    width: 196px;
+    left: 65%;
+  }
+  /* line 69, ../sass/_device.scss */
+  #section_about .wrapper div.background {
+    margin: 20px 0 0 10%;
+  }
+  /* line 72, ../sass/_device.scss */
+  #section_about .wrapper div.sxsw {
+    width: 240px;
+    float: left;
+    margin: 80px 0 0 25%;
+  }
+  /* line 77, ../sass/_device.scss */
+  #section_about .wrapper div.awards {
+    width: 60%;
+    margin: 40px 0 0 50%;
+  }
+}
+/* For larger  laptops */
+@media (max-width: 1280px) {
+  /* line 88, ../sass/_device.scss */
+  #section_about .wrapper {
+    margin-top: 90px;
+  }
+  /* line 90, ../sass/_device.scss */
+  #section_about .wrapper .cutButton {
+    top: -25px;
+  }
+  /* line 96, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    left: 36%;
+  }
+  /* line 99, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    left: 68%;
+  }
+}
+/* For smaller displays like laptops */
+@media (max-width: 950px) {
+  /* line 110, ../sass/_device.scss */
+  .logo {
+    width: 300px;
+  }
+
+  /* line 115, ../sass/_device.scss */
+  .section .wrapper {
+    margin-top: 70px;
+  }
+
+  /* line 119, ../sass/_device.scss */
+  .tagline, .statements {
+    display: block;
+    width: 100%;
+    left: 0px;
+  }
+  /* line 123, ../sass/_device.scss */
+  .tagline span, .statements span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* line 129, ../sass/_device.scss */
+  #section_about .wrapper {
+    margin-top: 90px;
+  }
+  /* line 131, ../sass/_device.scss */
+  #section_about .wrapper .cutButton {
+    top: -25px;
+  }
+  /* line 136, ../sass/_device.scss */
+  #section_about .wrapper .photos .laptop {
+    left: 10%;
+  }
+  /* line 139, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    left: 36%;
+  }
+  /* line 142, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    left: 72%;
+  }
+  /* line 146, ../sass/_device.scss */
+  #section_about .wrapper div.background {
+    margin: 20px 0 0 8%;
+  }
+  /* line 149, ../sass/_device.scss */
+  #section_about .wrapper div.sxsw {
+    margin: 80px 0 0 10%;
+  }
+  /* line 152, ../sass/_device.scss */
+  #section_about .wrapper div.awards {
+    margin: 40px 0 0 44%;
+  }
+  /* line 156, ../sass/_device.scss */
+  #section_about .wrapper div.background ul,
+  #section_about .wrapper div.awards ul {
+    font-size: 90%;
+  }
+}
+/* For tablets & smart phones */
+/* For smartphones */
+@media (max-width: 768px) {
+  /* line 167, ../sass/_device.scss */
+  .sub_sites .cutButton {
+    top: -15px;
+  }
+
+  /* line 172, ../sass/_device.scss */
+  .cutButton {
+    padding: 6px 6px 4px;
+    width: 40px;
+  }
+  /* line 175, ../sass/_device.scss */
+  .cutButton span {
+    display: none;
+  }
+
+  /* line 178, ../sass/_device.scss */
+  #section_about .wrapper {
+    margin-top: 90px;
+  }
+  /* line 180, ../sass/_device.scss */
+  #section_about .wrapper .cutButton {
+    top: -25px;
+  }
+  /* line 184, ../sass/_device.scss */
+  #section_about .wrapper .photos {
+    height: 300px;
+  }
+  /* line 187, ../sass/_device.scss */
+  #section_about .wrapper .photos .laptop {
+    width: 380px;
+    left: 6%;
+  }
+  /* line 191, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    width: 340px;
+    left: 32%;
+  }
+  /* line 195, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    width: 160px;
+    left: 68%;
+  }
+  /* line 200, ../sass/_device.scss */
+  #section_about .wrapper div.background {
+    margin: 20px 0 0 8%;
+  }
+  /* line 203, ../sass/_device.scss */
+  #section_about .wrapper div.sxsw {
+    float: right;
+    margin: 80px 0 0 0;
+    width: 200px;
+  }
+  /* line 208, ../sass/_device.scss */
+  #section_about .wrapper div.awards {
+    margin: 40px 0 0 8%;
+  }
+  /* line 212, ../sass/_device.scss */
+  #section_about .wrapper div.background ul,
+  #section_about .wrapper div.awards ul {
+    font-size: 90%;
+  }
+}
+/* For smartphones */
+@media (max-width: 640px) {
+  /* line 221, ../sass/_device.scss */
+  header {
+    top: -1px;
+  }
+
+  /* line 224, ../sass/_device.scss */
+  ul.navigation {
+    display: none;
+  }
+
+  /* line 227, ../sass/_device.scss */
+  ul.navigation.show {
+    display: block;
+    position: relative;
+    top: 10px;
+    background: #323232;
+  }
+  /* line 233, ../sass/_device.scss */
+  ul.navigation.show li {
+    float: none;
+  }
+
+  /* line 237, ../sass/_device.scss */
+  a#pull {
+    display: block;
+  }
+
+  /* line 240, ../sass/_device.scss */
+  .logo {
+    width: 250px;
+    margin-left: -125px;
+  }
+
+  /* line 245, ../sass/_device.scss */
+  .statements span {
+    font-size: 80%;
+  }
+
+  /* line 249, ../sass/_device.scss */
+  #section_home .tagline {
+    margin-top: 60px;
+  }
+
+  /* line 254, ../sass/_device.scss */
+  #section_about .wrapper .photos {
+    height: 200px;
+  }
+  /* line 256, ../sass/_device.scss */
+  #section_about .wrapper .photos .laptop {
+    width: 250px;
+    left: 5%;
+  }
+  /* line 260, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    width: 220px;
+    left: 40%;
+  }
+  /* line 264, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    width: 90px;
+    left: 70%;
+  }
+  /* line 269, ../sass/_device.scss */
+  #section_about .wrapper h1 {
+    font-size: 32px;
+  }
+  /* line 272, ../sass/_device.scss */
+  #section_about .wrapper h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+  /* line 277, ../sass/_device.scss */
+  #section_about .wrapper div.background {
+    margin: 20px 0 0 3%;
+  }
+  /* line 280, ../sass/_device.scss */
+  #section_about .wrapper div.sxsw {
+    display: none;
+  }
+  /* line 283, ../sass/_device.scss */
+  #section_about .wrapper div.awards {
+    width: auto;
+    margin: 20px 0 0 3%;
+  }
+  /* line 288, ../sass/_device.scss */
+  #section_about .wrapper div.background ul,
+  #section_about .wrapper div.awards ul {
+    font-size: 85%;
+  }
+}
+/* For smartphones smaller */
+@media (max-width: 480px) {
+  /* line 301, ../sass/_device.scss */
+  #section_about .wrapper .photos {
+    height: 170px;
+  }
+  /* line 303, ../sass/_device.scss */
+  #section_about .wrapper .photos .laptop {
+    width: 200px;
+    left: 0%;
+  }
+  /* line 307, ../sass/_device.scss */
+  #section_about .wrapper .photos .desktop {
+    width: 180px;
+    left: 28%;
+  }
+  /* line 311, ../sass/_device.scss */
+  #section_about .wrapper .photos .tablet {
+    width: 90px;
+    left: 70%;
+  }
+  /* line 316, ../sass/_device.scss */
+  #section_about .wrapper h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+  /* line 322, ../sass/_device.scss */
+  #section_about .wrapper div.sxsw {
+    display: none;
+  }
+  /* line 325, ../sass/_device.scss */
+  #section_about .wrapper div.awards {
+    width: auto;
+  }
+  /* line 329, ../sass/_device.scss */
+  #section_about .wrapper div.background ul,
+  #section_about .wrapper div.awards ul {
+    font-size: 83%;
+  }
+}
+/* line 1, ../sass/_slideshow.scss */
+#slides_botc {
+  display: none;
+}
+
+/* Center the slideshow */
+/* line 6, ../sass/_slideshow.scss */
+.slide_container {
+  margin: 0 auto;
+}
+
+/* Show active item in the pagination */
+/* line 11, ../sass/_slideshow.scss */
+.slidesjs-pagination .active {
+  color: red;
+}
+
+/* Media quires for a responsive layout */
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+  /* line 21, ../sass/_slideshow.scss */
+  .container {
+    width: auto;
+  }
+}
+/* For smartphones */
+@media (max-width: 480px) {
+  /* line 28, ../sass/_slideshow.scss */
+  .container {
+    width: auto;
+  }
+}
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 35, ../sass/_slideshow.scss */
+  .container {
+    width: 724px;
+  }
+}
+/* For larger displays */
+@media (min-width: 1200px) {
+  /* line 42, ../sass/_slideshow.scss */
+  .container {
+    width: 1170px;
+  }
+}
+/* line 46, ../sass/_slideshow.scss */
+.slidesjs-navigation {
+  font-size: 20px;
+  color: #323232;
+  text-decoration: none;
+}
+
+/* line 51, ../sass/_slideshow.scss */
+ul.slidesjs-pagination {
+  float: right;
+  list-style: none;
+}
+/* line 55, ../sass/_slideshow.scss */
+ul.slidesjs-pagination li.slidesjs-pagination-item {
+  display: block;
+  float: left;
+}
+/* line 59, ../sass/_slideshow.scss */
+ul.slidesjs-pagination li.slidesjs-pagination-item a {
+  display: block;
+  width: 8px;
+  height: 0;
+  padding-top: 8px;
+  color: #323232;
+  text-decoration: none;
+  border: 3px solid #323232;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0px 4px;
+}
+/* line 71, ../sass/_slideshow.scss */
+ul.slidesjs-pagination li.slidesjs-pagination-item a.active {
+  background: #323232;
+}
+
+/* Before After */
+/* line 80, ../sass/_slideshow.scss */
+#slide4 .slide_container.slideshow,
+#slide4 .slide_container .slide_group, #slide5 .slide_container.slideshow,
+#slide5 .slide_container .slide_group {
+  border: 1px solid #dedede;
+}
+
+/* line 86, ../sass/_slideshow.scss */
+#slide4 .slide_container.slideshow .slidesjs-container {
+  margin-bottom: 7px;
+}
+/* line 89, ../sass/_slideshow.scss */
+#slide4 .slide_container.slideshow a.slidesjs-navigation {
+  position: relative;
+  top: -5px;
+}
+/* line 93, ../sass/_slideshow.scss */
+#slide4 .slide_container.slideshow a.slidesjs-previous {
+  margin-left: 5px;
+}
+
+/* line 98, ../sass/_slideshow.scss */
+.slide_container.before_after {
+  position: relative;
+}
+/* line 101, ../sass/_slideshow.scss */
+.slide_container.before_after .slide_group {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+/* line 107, ../sass/_slideshow.scss */
+.slide_container.before_after .slider, .slide_container.before_after .slides.after {
+  position: absolute;
+  top: 0px;
+}
+/* line 111, ../sass/_slideshow.scss */
+.slide_container.before_after .slides {
+  max-width: 1278px;
+}
+/* line 114, ../sass/_slideshow.scss */
+.slide_container.before_after .slides img {
+  display: block;
+}
+/* line 116, ../sass/_slideshow.scss */
+.slide_container.before_after .slider {
+  cursor: col-resize;
+  width: 40px;
+  height: 100%;
+  background: url(../../images/slider-before-after.png) no-repeat 0 50%;
+  left: 50%;
+  z-index: 15;
+}
+/* line 124, ../sass/_slideshow.scss */
+.slide_container.before_after .before_after_labels {
+  padding: 10px 0 0 0;
+  clear: both;
+  border-top: 1px solid #fff;
+}
+/* line 129, ../sass/_slideshow.scss */
+.slide_container.before_after .before_after_labels span.label {
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
 }

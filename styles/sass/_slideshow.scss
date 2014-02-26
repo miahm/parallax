@@ -1,0 +1,138 @@
+#slides_botc {
+  display: none
+}
+
+/* Center the slideshow */
+.slide_container {
+  margin: 0 auto
+}
+
+/* Show active item in the pagination */
+.slidesjs-pagination .active {
+  color:red;
+}
+
+/* Media quires for a responsive layout */
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+  body {
+  }
+  .container {
+    width: auto
+  }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+  .container {
+    width: auto
+  }
+}
+
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 979px) {
+  .container {
+    width: 724px;
+  }
+}
+
+/* For larger displays */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px
+  }
+}
+.slidesjs-navigation{
+    font-size: 20px;
+    color: $clr_textColor;
+    text-decoration: none;
+}
+ul.slidesjs-pagination{
+    float: right;
+    list-style: none;
+    
+    li.slidesjs-pagination-item{
+        display: block;
+        float: left;
+        
+        a{
+            display: block;
+            width: 8px;
+            height: 0;
+            padding-top: 8px;
+            color: $clr_textColor;
+            text-decoration: none;
+            border: 3px solid $clr_textColor;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 0px 4px;
+        }
+        a.active{
+            background: $clr_textColor;
+        }
+    }
+}
+
+/* Before After */
+#slide4, #slide5{
+    .slide_container.slideshow,
+    .slide_container .slide_group{
+        border: 1px solid $clr_slidesBorder;
+    }
+}
+#slide4{
+    .slide_container.slideshow{
+        .slidesjs-container{
+            margin-bottom: 7px;
+        }
+        a.slidesjs-navigation{
+            position: relative;
+            top: -5px;
+        }
+        a.slidesjs-previous{
+            margin-left: 5px;
+        }
+    }
+}
+.slide_container.before_after {
+    position: relative;
+    
+    .slide_group{
+        position: relative;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .slider, .slides.after{
+        position: absolute;
+        top: 0px;
+    }
+    .slides{
+        max-width: 1278px;
+        
+        img { display: block; }
+    }
+    .slider{
+        cursor: col-resize;
+        width: 40px;
+        height: 100%;
+        background: url(../../images/slider-before-after.png) no-repeat 0 50%;
+        left: 50%;
+        z-index: 15;
+    }
+    .before_after_labels{
+        padding: 10px 0 0 0;
+        clear: both;
+        border-top: 1px solid #fff;
+        
+        span.label{
+            display: block;
+            float: left;
+            width: 50%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+

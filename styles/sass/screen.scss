@@ -3,26 +3,9 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass";
-@import "compass/reset";
-@import "compass/layout/stretching";
-@import "compass/utilities";
-@import "compass/css3";
+@import "base";
 
-//================= Set some variables
-$bodyColor: #efefef;
-
-//================ Mixins
-
-@mixin position-fixed($top, $left, $z) {
-    position: fixed;
-    top: $top;
-    left:$left;
-    z-index: $z;
-}
-
-
-//=============== Get into the UI
+//=============== Global Elements and Styles ==============
 html,body{
 	width:100%;
 	height:100%;
@@ -31,28 +14,347 @@ html,body{
 body {
     min-height: 100%;
     font-size: 100% Helvetica, sans-serif;
-    background-color: $bodyColor;
+    background-color: $clr_bodyColor;
+    //overflow: hidden;
+    
+    color: $clr_textColor;
+    font: {
+        family: AllerLight;
+        size: 16px;
+    }
+    line-height: 20px;
+}
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 44px;
+    z-index: 1000;
+    
+    -webkit-transition: background 600ms ease-out;
+    -moz-transition: background 600ms ease-out;
+    -ms-transition: background 600ms ease-out;
+    -o-transition: background 600ms ease-out;
+    transition: background 600ms ease-out;
+
+    div.wrapper{
+        @include max-size;
+        
+        padding: 10px;
+        height: 24px;
+        
+        .logo_black{
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+            
+            img{
+                position: relative;
+                top: 0px;
+            }
+        }
+    }
+    
+    .navigation {
+        position: relative;
+        top: -24px;
+        float: right;
+        
+        li {
+            display: block;
+            float: left;
+            text-transform: uppercase;
+            cursor: pointer;
+            
+            color: $clr_navLinksStart;
+            font: {
+                family: Aller;
+                size: 18px;
+            }
+            
+            padding: 0px 10px;
+            
+            &:hover, 
+            &.active{
+                color:$clr_navLinksStartHover;
+            }
+        }
+        
+    }
+    
+    a#pull{
+        padding: 5px;
+        text-decoration: none;
+        @include border-radius(4px);
+        font-size: 100%;
+        margin: 5px 0 2px 5px;
+        background: $clr_navBG;
+        color: $clr_navLinks;
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        z-index: 5;
+    }
 }
 
-.slide {
-    background: adjust-lightness($bodyColor, -5);
-    width: 100%;
-    height: 100%;
+header.down{
+    background-color: $clr_navBG;
+    
+    div.wrapper {
+        .logo_black{
+            img{
+                top: -24px;
+            }
+        }
+        
+        li {
+            color: $clr_navLinks;
+        }
+        li:hover,.active{
+            color: $clr_navLinksHover;
+        }
+    }
+    
+}
+h1, h2, h3, h4{
+    font:{
+        family: MuseoBold;
+    }
+    
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 55px;
+}
+h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+.transparent{
+    @include transparent;
+}
+.cutCornerBottomRight{
+    @include cutCornerBottomRight(20px, $clr_cutCorner1);
+    
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    right: 10px;
+    display: block;
+    background: $clr_cutCornerBG;
+    //height: 15px;
+    font-family: Aller;
+    color: $clt_cutCornerText;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.clearfix{
+    @include clearfix;
+}
+.spinner{
+    @include spinner;
+}
+
+
+
+//=============== Get Into the UI ==============
+
+.section {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin:0 0 1px 0; 
+    padding:0; 
+    height: auto;
+    min-height: 100%;
+    
+    .wrapper{
+        position:relative;
+        @include max-size;
+        margin-top: 60px;
+        min-height:100%;
+        padding: 20px;
+        
+        .sub_sites{
+            position: relative;
+            
+            .cutButton{
+                top: -15px;;
+            }
+        
+        }
+        
+        ul{
+            line-height: 24px;
+        }
+    
+        .statements{
+            position: relative;
+            text-align: center;
+            color: $clr_textColor;
+            font: {
+                family: MuseoBold;
+                size: 20px;
+            }
+        
+            .one, .two, .three{
+                position: relative;
+            }
+        }
+    }
+    
 }
-.navigation {
-    position: fixed;
-    z-index: 1;
-    top: 20px;
+
+#section_home{
+    background-image: url(../../images/bg_top2.jpg);
+    background-size: cover;
+    //background-attachment: fixed;
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    height:100%;
+    
+    .gradient{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q0ZDQ4YyIgc3RvcC1vcGFjaXR5PSIwLjg5Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ1JSIgc3RvcC1jb2xvcj0iI2U3ZTdjMCIgc3RvcC1vcGFjaXR5PSIwLjY5Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  rgba(212,212,140,0.89) 0%, rgba(231,231,192,0.69) 45%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(212,212,140,0.89)), color-stop(45%,rgba(231,231,192,0.69)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(212,212,140,0.89) 0%,rgba(231,231,192,0.69) 45%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(212,212,140,0.89) 0%,rgba(231,231,192,0.69) 45%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(212,212,140,0.89) 0%,rgba(231,231,192,0.69) 45%,rgba(255,255,255,0) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(212,212,140,0.89) 0%,rgba(231,231,192,0.69) 45%,rgba(255,255,255,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3d4d48c', endColorstr='#00ffffff',GradientType=0 ); /* IE6-8 */
+
+    }
+    
+    .wrapper{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        z-index: 1;
+        margin: 0px;
+        padding: 0px;
+        
+        
+        .logo{
+            position: relative;
+            top: 50%;
+            margin: -105px auto 0;
+        }
+        .tagline{
+            position: relative;
+            width: 100%;
+            top: 50%;
+            
+            @include single-text-shadow(#C4C782, 0, 0, 15px );
+            
+            color: $clr_textColor;
+            font: {
+                family: Aller;
+                size: 20px;
+            }
+        }
+    }
 }
-.navigation li:hover,.active{
-	font-size:25px;
-	cursor:pointer;
-	width:100px!important;
+
+#section_about{
+    .wrapper{
+        .cutButton{
+            top: -15px;
+        }
+        
+        .photos{
+            position: relative;
+            margin-top: 40px;
+            height: 400px;
+            
+            .device{
+                position: absolute;
+            }
+            .laptop{
+                z-index: 1;
+            }
+            .desktop{
+                z-index: 2;
+            }
+            .tablet{
+                z-index: 3;
+            }
+        }
+        
+    }
 }
-.envatologo {
-    @include position-fixed(50%, 50%, 1);
-    width: 446px;
-    margin-top: -41px;
-    margin-left: -223px;
+
+
+#section_connect{
+    .client_container{
+        background: url(../../images/client_bg.png) repeat 0 0 transparent ;
+        
+        .wrapper{
+            overflow: hidden;
+        
+            .statements{
+                margin: 20px 0 30px 0;
+            }
+        
+            .col{
+                width: 32%;
+                float: left;
+                text-align: center;
+            }
+            .col.one, .col.two{
+                border-right: 2px solid $clr_clientBorder;
+            }
+        }
+    }
+    .wrapper{
+        .statements {
+            margin: 50px 0;
+            span{
+                display: inline-block;
+                //width: 30%;
+            }
+        }
+		
+		.statements.contact {
+			text-align: left;
+			span{
+				display: inline-block;
+				margin-right: 50px;
+				text-align: left;
+			}
+			
+			i.email{
+				font-size: 30px;
+			}
+			
+			i.phone{
+				font-size: 40px;
+			}
+		}
+        
+        a{
+            color: $clr_textColor;
+        }
+    }
 }
+
+//$i: 4;
+//@while $i > 0 {
+//  #slide#{$i} { background: adjust-lightness($bodyColor, -3 * $i ); }
+//  $i: $i - 1;
+//}
+
+@import "device";
+@import "slideshow";

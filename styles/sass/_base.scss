@@ -1,0 +1,81 @@
+@import "compass";
+@import "compass/support";
+@import "compass/reset";
+@import "compass/layout/stretching";
+@import "compass/utilities";
+@import "compass/css3";
+
+//================= Set some variables
+
+//--------- COLORS -------
+//General
+$clr_bodyColor: #fff;
+$clr_slashedButtons: #ED2171;
+$clr_textColor: #323232;
+
+//Navigation
+$clr_navBG: #323232;
+$clr_navLinksStart: #223020;
+$clr_navLinksStartHover: #fff;
+$clr_navLinks: #c8c8c8;
+$clr_navLinksHover: #999;
+
+//Cut Corner
+$clr_cutCorner1: #fff;
+$clr_cutCornerBG: #ED2171;
+$clt_cutCornerText: #DBDADA;
+
+//Clients
+$clr_clientBorder: #b5b5b5;
+
+//Slides and Before-After
+$clr_slidesBorder: #dedede;
+
+//================ Mixins =================
+
+//Basic fixed position
+@mixin position-fixed($top, $left, $z) {
+    position: fixed;
+    top: $top;
+    left:$left;
+    z-index: $z;
+}
+
+//Cur corner buttons
+@mixin cutCornerBottomRight($size, $bk){
+    &:before {
+        content:"";
+        position:absolute;
+        bottom: 0;
+        right:0;
+        border-width:0px 0px $size $size;
+        border-style:solid;
+        border-color: transparent $bk $bk transparent;
+    }
+}
+
+//Max size for the site
+@mixin max-size{
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+@mixin animation($name, $duration: 1s, $easing: linear, $delay: 0, $iteration: infinite, $direction: normal){
+    @if $name == none {
+    }
+    @else {
+        animation: $name $duration $easing $delay infinite alternate;
+        /* Safari and Chrome: */
+        -webkit-animation: $name $duration $easing $delay $iteration $direction;
+    }
+    
+}
+
+
+//========= Global Reset ==========
+
+@include global-reset;
+
+
+//=========== Additional Modules =========
+@import "spinners";

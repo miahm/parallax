@@ -1,0 +1,334 @@
+
+/* For the largest possible displays - Defaults that may change later */
+@media (max-width: 10000px) {
+    a#pull{
+        display: none;  
+    }
+    .logo_black{
+        width: 162px;
+    }
+    .cutButton{
+        padding: 8px 8px 6px;
+        width: 180px;
+        font-size: 15px;
+        
+        i{
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+    .section{
+        .wrapper{
+            margin-top: 80px;
+            
+            .logo{
+                width: 366px;
+                //margin-left: -188px;
+            }
+            .tagline, 
+            .statements {
+                display: block;
+                width: 100%;
+                left: 0px;
+                text-align: center;
+                margin: 40px 0 80px;
+                
+                span{
+                    position: relative;
+                }
+            }
+        }
+    }
+    #section_home .tagline{
+        margin: 0px;
+    }
+    
+    #section_about{
+        .wrapper{
+            .statements {
+                margin: 0px;
+            }
+            .photos{
+                .device{
+                    bottom: 0px;
+                }
+                .laptop{
+                    width: 502px;
+                    left: 10%;
+                    bottom: 20px;
+                }
+                .desktop{
+                    width: 446px;
+                    left: 40%;
+                }
+                .tablet{
+                    width: 196px;
+                    left: 65%;
+                }
+            }
+            div.background {
+                margin: 20px 0 0 10%;
+            }
+            div.sxsw{
+                width: 240px;
+                float: left;
+                margin: 80px 0 0 25%;
+            }
+            div.awards{
+                width: 60%;
+                margin: 40px 0 0 50%;
+            }
+        }
+    }
+}
+
+/* For larger  laptops */
+@media (max-width: 1280px) {
+    #section_about{
+        .wrapper{
+            margin-top: 90px;       //Needs more margin on top to accomodate the launch button
+            .cutButton{             //Adjust the cut button position - slightly higher
+                top: -25px;
+            }
+            .photos{                //Change the photo positioning for the smaller screen
+                //.device{}
+                //.laptop{}
+                .desktop{
+                    left: 36%;
+                }
+                .tablet{
+                    left: 68%;
+                }
+            }
+        }
+    }
+}
+
+/* For smaller displays like laptops */
+@media  (max-width: 950px) {
+    
+    .logo{                          //Start changing logo size
+        width: 300px;
+        //margin-left: -150px;
+    }
+    .section{
+        .wrapper{
+            margin-top: 70px;
+        }
+    }
+    .tagline, .statements {
+        display: block;
+        width: 100%;
+        left: 0px;
+        span{
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    #section_about{
+        .wrapper{
+            margin-top: 90px;
+            .cutButton{
+                top: -25px;
+            }
+            
+            .photos{
+                .laptop{
+                    left: 10%;
+                }
+                .desktop{
+                    left: 36%;
+                }
+                .tablet{
+                    left: 72%;
+                }
+            }
+            div.background {
+                margin: 20px 0 0 8%;
+            }
+            div.sxsw {
+                margin: 80px 0 0 10%;
+            }
+            div.awards {
+                margin: 40px 0 0 44%;
+            }
+            div.background ul, 
+            div.awards ul{
+                font-size: 90%;
+            }
+        }
+    }
+}
+
+/* For tablets & smart phones */
+/* For smartphones */
+@media (max-width: 768px) {
+    .sub_sites{
+        .cutButton{
+            top: -15px;;
+        }
+    }
+    
+    .cutButton{
+        padding: 6px 6px 4px;
+        width: 40px;
+        span { display: none; }
+    }
+    #section_about{
+        .wrapper{
+            margin-top: 90px;
+            .cutButton{
+                top: -25px;
+            }
+            
+            .photos{
+                height: 300px;
+                
+                .laptop{
+                    width: 380px;
+                    left: 6%;
+                }
+                .desktop{
+                    width: 340px;
+                    left: 32%;
+                }
+                .tablet{
+                    width: 160px;
+                    left: 68%;
+                }
+            }
+            div.background {
+                margin: 20px 0 0 8%;
+            }
+            div.sxsw {
+                float: right;
+                margin: 80px 0 0 0;
+                width: 200px;
+            }
+            div.awards {
+                margin: 40px 0 0 8%;
+            }
+            div.background ul, 
+            div.awards ul{
+                font-size: 90%;
+            }
+        }
+    }
+}
+
+/* For smartphones */
+@media (max-width: 640px) {
+    header{
+        top: -1px;
+    }
+    ul.navigation{
+        display: none;  
+    }
+    ul.navigation.show{
+        display: block;
+        position: relative;
+        top: 10px;
+        background: $clr_textColor;
+        
+        li {
+            float: none;
+        }
+    }
+    a#pull{
+        display: block;  
+    }
+    .logo{
+        width: 250px;
+        margin-left: -125px;
+    }
+    .statements {
+        span{
+            font-size: 80%;
+        }
+    }
+    #section_home .tagline{
+        margin-top: 60px;
+    }
+    #section_about{
+        .wrapper{
+            .photos{
+                height: 200px;
+                .laptop{
+                    width: 250px;
+                    left: 5%;
+                }
+                .desktop{
+                    width: 220px;
+                    left: 40%;
+                }
+                .tablet{
+                    width: 90px;
+                    left: 70%;
+                }
+            }
+            h1{
+                font-size: 32px;
+            }
+            h2{
+                font-size: 18px;
+                margin-bottom: 10px;
+                line-height: 22px;
+            }
+            div.background {
+                margin: 20px 0 0 3%;
+            }
+            div.sxsw {
+                display: none;
+            }
+            div.awards {
+                width: auto;
+                margin: 20px 0 0 3%;
+            }
+            div.background ul, 
+            div.awards ul{
+                font-size: 85%;
+            }
+        }
+    }
+}
+
+
+/* For smartphones smaller */
+@media (max-width: 480px) {
+
+    #section_about{
+        .wrapper{
+            .photos{
+                height: 170px;
+                .laptop{
+                    width: 200px;
+                    left: 0%;
+                }
+                .desktop{
+                    width: 180px;
+                    left: 28%;
+                }
+                .tablet{
+                    width: 90px;
+                    left: 70%;
+                }
+            }
+            h2{
+                font-size: 18px;
+                margin-bottom: 10px;
+                line-height: 22px;
+            }
+            div.background {}
+            div.sxsw {
+                display: none;
+            }
+            div.awards {
+                width: auto;
+            }
+            div.background ul, 
+            div.awards ul{
+                font-size: 83%;
+            }
+        }
+    }
+}

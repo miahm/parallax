@@ -2,9 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Create a Parralax Website using Stellar.js</title>
+    <title>ProjectMiso | A Winning Team</title>
+    
+	<!-- for responsive scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+	
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
 <!--[if IE]>
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 7 ]>
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome-ie7.css">
 <![endif]-->
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     
@@ -14,8 +22,10 @@
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
     
+    <script type="text/javascript" src="js/jquery.slides.min.js"></script>
+    
     <!-- Custom Modules -->
-    <script type="text/javascript" src="js/miso.locator.js"></script>
+    <script type="text/javascript" src="js/miso.tracker.js"></script>
     
     <!-- Script Level -->
     <script type="text/javascript" src="js/scripts.js"></script>
@@ -23,89 +33,264 @@
 </head>
 
 <body>
+    
+	<!-- Start Main Header -->
+    <header class="transparent">
+        <div class="wrapper">
+            <div class="logo_black"><img src="images/logo-small-black-gray.png" width="100%" alt="logo-small-black-gray"></div>
+            <ul class="navigation">
+                <li data-slide="home">Intro</li>
+                <li data-slide="about">About</li>
+                <li data-slide="botc">BOTC</li>
+                <li data-slide="ga">GA</li>
+                <li data-slide="hkaplan">H Kaplan</li>
+                <li data-slide="connect">Connect</li>
+            </ul>
+            <a href="#" id="pull"><i class="icon-reorder"></i> Menu</a>  
+	    </div>
+    </header>
+	<!-- End Main Header -->
 
-	<ul class="navigation">
-		<li data-slide="1">Slide 1</li>
-		<li data-slide="2">Slide 2</li>
-		<li data-slide="3">Slide 3</li>
-		<li data-slide="4">Slide 4</li>
-	</ul>
+
+	<!--Start Section - Intro -->
+	<section class="section" id="section_home" data-misotracker-section="1" data-transitions-background-ratio="0">
+	    <div class="gradient"></div>
+		<div class="wrapper">
+            <div class="logo transparent" data-transition="opacity,slideY" data-transition-slide="-4%" data-transition-reset="1"><img src="images/pm-large-colored-white.png" width="100%" alt="pm-large-colored-white"></div>
+            <div class="tagline">
+                <span class="one transparent" data-transition="opacity,slideY"  data-transition-slide="20" data-transition-reset="1">Designed for People.</span>
+                <span class="two transparent" data-transition="opacity,slideY"  data-transition-slide="20" data-transition-reset="1">Made for the Web.</span>
+            </div>
+		</div>
+		
+		<!--
+		<div class="spinner moon"></div>
+		-->
+	</section>
+	<!--End Section - Intro -->
 
 
 
-          
-	<img class="envatologo" src="images/envatologo.png">
+	<!-- Start Section - About -->
+	<section class="section" id="section_about" data-misotracker-section="2">
+		<div class="wrapper">
+		    <a class="cutButton one cutCornerBottomRight" href="http://www.projectmiso.net" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    
+            <div class="statements">
+                <span class="one" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">We develop business solutions.</span>
+                <span class="two" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">We design for people.</span>
+                <span class="three" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">We make websites.</span>
+            </div>
+            
+            <div class="photos">
+                <div class="device laptop" data-transition="opacity"><img src="images/miso-laptop.png" width="100%"  alt="miso-laptop"></div>
+                <div class="device desktop" data-transition="opacity"><img src="images/miso-desktop.png" width="100%" alt="miso-desktop"></div>
+                <div class="device tablet" data-transition="opacity"><img src="images/miso.tablet.png" width="100%" alt="miso.tablet"></div>
+            </div>
+            
+            <div class="info_box background" data-transitions="opacity">
+                <h2 class="background">Background</h2>
+                <ul>
+                    <li>+ Started in 2001</li>
+                    <li>+ Small Elite Team of Experts</li>
+                    <li>+ Enterprises, Startups & Small Businesses</li>
+                    <li>+ Hundreds of Millions in Sales for our Clients</li>
+                </ul>
+            </div>
+            
+            <div class="sxsw" data-transitions="opacity"><img src="images/sxsw.gif" width="100%" alt="sxsw"></div>
+            <div class="info_box awards" data-transitions="opacity">
+                <h2 class="awards">Some of the Awards We’ve Won</h2>
+                <ul>
+                    <li>+ American Design Awards // Gold Award August 2009</li>
+                    <li>+ South by South West (SXSW) // CSS Category Winner 2009</li>
+                    <li>+ W3 Web Award // Silver Award 2008</li>
+                    <li>+ Computer Space // First Prize 2008</li>
+                    <li>+ IDAA New Media Awards // Third Prize 2004</li>
+                    <li>+ American Design Awards // Semi-Annual Gold Award 2003</li>
+                    <li>+ Computer Space // Third Prize 2003 </li>
+                </ul>
+            </div>
+
+		</div>
+
+
+	</section>
+	<!--End Section - About -->
+
+
+
+
+	<!-- Start Section - BOTC -->
+	<section class="section" id="section_botc" data-misotracker-section="3">
+		<div class="wrapper">
+		    <h1 data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Bid on the City</h1>
+		    <div class="sub_sites">
+                <h2>www.Findsider.com</h2>
+		        <a class="cutButton one cutCornerBottomRight" href="http://www.findsider.com" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    </div>
+		    <div class="sub_sites">
+                <h2>www.BidOnTheCity.com</h2>
+		        <a class="cutButton one cutCornerBottomRight" href="http://www.bidonthecity.com" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    </div>
+		    
+		    <div class="slide_container">
+                <div id="slides_botc">
+                    <img src="images/case_findsider1.jpg"  alt="case_findsider1">
+                    <img src="images/case_botc0.jpg" alt="case_botc1">
+                    
+                    <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-angle-left icon-large"></i></a>
+                    <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-angle-right icon-large"></i></a>
+                </div>
+            </div>
+            
+            <div class="statements">
+                <span class="one" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">New Ideas.</span>
+                <span class="two" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">State of the Art Technology.</span>
+                <span class="three" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Elegant Design.</span>
+            </div>
+                
+		    
+		    
+		</div>
+
+
+	</section><
+	<!-- End Section - BOTC -->
+
+
+
+
+
+
+	<!-- Start Section - GA -->
+	<section class="section" id="section_ga" data-misotracker-section="4">
+		
+		<div class="wrapper">
+		    <h1 data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Genetic Alliance</h1>
+		    <div class="sub_sites">
+                <h2>www.BabysFirstTest.org</h2>
+		        <a class="cutButton one cutCornerBottomRight" href="http://www.babysfirsttest.org" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    </div>
+		    
+		    <div class="slide_container slideshow">
+                <div id="slides_bft">
+                    <img src="images/case_bft1.jpg" alt="case_bft1">
+                    <img src="images/case_bft2.jpg" alt="case_bft2">
+                    
+                    <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-angle-left icon-large"></i></a>
+                    <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-angle-right icon-large"></i></a>
+                </div>
+            </div>
+            
+            <div class="statements">
+                <span class="one" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Targeted Branding.</span>
+                <span class="two" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Informative.</span>
+                <span class="three" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Enthusiastically Adopted by Users.</span>
+            </div>
+            
+            <br>
+            <br>
+		    <div class="sub_sites">
+                <h2>www.GenesInLife.org</h2>
+		        <a class="cutButton one cutCornerBottomRight" href="http://www.genesinlife.org" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    </div>
+		    
+		    <div class="slide_container before_after gil">
+		        <div class="slide_group">
+		            <div class="slider"></div>
+                    <div class="slides before"><img src="images/case_gil2.jpg" width="100%" alt="case_gil2"></div>
+                    <div class="slides after"><img src="images/case_gil1.jpg" alt="case_gil1"></div>
+		        </div>
+                <div class="before_after_labels">
+                    <span class="label">Before</span>
+                    <span class="label">After</span>
+                </div>
+		    </div>
+            <br>
+            
+            <div class="statements">
+                <span class="one" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Equal Amount of Content.</span>
+                <span class="two" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Modern Design.</span>
+                <span class="three" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Succinctly Organized.</span>
+            </div>
+                
+		</div>
+
+
+	</section>
+	<!-- End Section - GA -->
+
+
+		
+
+
+
+	<!-- Start Section - KH -->
+	<section class="section" id="section_hkaplan" data-misotracker-section="5">
+		
+		<div class="wrapper">
+		    <h1 data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Howard Kaplan</h1>
+		    <a class="cutButton one cutCornerBottomRight" href="http://clients.projectmiso.net/hkaplan" target="_blank" data-transitions="opacity"><i class="icon-external-link"></i> <span>Launch Website</span></a>
+		    
+		    
+		    <div class="slide_container before_after hkaplan">
+		        <div class="slide_group">
+		            <div class="slider"></div>
+                    <div class="slides before"><img src="images/case_hkaplan1.jpg" width="100%" alt="case_gil2"></div>
+                    <div class="slides after"><img src="images/case_hkaplan2.jpg" alt="case_gil1"></div>
+		        </div>
+                <div class="before_after_labels">
+                    <span class="label">Before</span>
+                    <span class="label">After</span>
+                </div>
+		    </div>
+            <br>
+		    
+            <div class="statements">
+                <span class="three" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Lots of Inventory.</span>
+                <span class="one" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Better Assembled.</span>
+                <span class="two" data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Fresh Branding.</span>
+            </div>
+		        
+		    
+		</div>
+
+	</section>
+	<!-- End Section - KH -->
+
+    
+    
+
+	<!-- Start Section - Clients/Connect -->
+	<section class="section" id="section_connect" data-misotracker-section="6">
+		
+		<div class="client_container">
+            <div class="wrapper">
+                <div class="statements">
+                    <span class="one">Some of the Clients We’ve Worked With</span>
+                </div>
+                
+                <div class="col one"><img src="images/clients-1.png" width="219" height="237" alt="clients-1"></div>
+                <div class="col two"><img src="images/clients-2.png" width="155" height="236" alt="clients-2"></div>
+                <div class="col three"><img src="images/clients-3.png" width="233" height="235" alt="clients-3"></div>
+            </div>
+		</div>
+		
+		<div class="wrapper">
+		    <h1 data-transition="opacity,slideY"  data-transition-slide="-20" data-transition-reset="1">Interested in ProjectMiso?</h1>
+		
+            <div class="statements contact">
+                <span class="three">Shoot Us an Email or Give Us a Ring</span>
+                <span class="one"><i class="icon-envelope-alt email">&nbsp;</i> <a href="mailto:email@projectmiso.net">email@projectmiso.net</a></span>
+                <span class="two"><i class="icon-mobile-phone phone">&nbsp;</i>  347.669.4094</span>
+            </div>
+		</div>
+        
+
+	</section>
+	<!-- Start Section - Clients/Connect -->
 	
-
-	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
-		
-		<a class="button" data-slide="2" title=""></a>
-
-	</div><!--End Slide 1-->
-
-
-
-	<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
-		<div class="wrapper">
-
-			<img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">
-			<img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">
-			<img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-			<img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">
-			<img src="images/slide2/blur-ball.png" data-stellar-ratio="3" data-stellar-vertical-offset="-55"alt="">
-			<img src="images/slide2/blur-ball-big.png" data-stellar-ratio="1" data-stellar-vertical-offset="-102"alt="">
-			<img src="images/slide2/focus-ball.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-			<img src="images/slide2/small-ball.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-25"alt="">	
-
-		</div>
-
-		<span class="slideno">Slide 2</span>
-		<a class="button" data-slide="3" title=""></a>
-
-	</div><!--End Slide 2-->
-
-
-
-
-
-	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
-		<div class="wrapper">
-		
-			<img src="images/slide3/freelance.png" data-stellar-ratio="1.4" data-stellar-vertical-offset="-102"alt="" class="track">
-			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-53"alt="">
-			<img src="images/slide3/rockable.png" data-stellar-ratio="2.7" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/themeforest.png" data-stellar-ratio="3" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/tutshub.png" data-stellar-ratio="1" data-stellar-vertical-offset="-200"alt="">
-			<img src="images/slide3/psdtuts.png" data-stellar-ratio="1.5" data-stellar-vertical-offset="-200"alt="">
-		</div>
-
-		<span class="slideno">Slide 3</span>
-		<a class="button" data-slide="4" title=""></a>
-
-	</div><!--End Slide 3-->
-
-
-
-
-
-
-	<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0">
-		
-
-		<span class="slideno">Slide 4</span>
-		<span class="parallaxbg">Use the parallax effects on background images too!</span>
-
-	</div><!--End Slide 4-->
-
-
-			
-
-
-
-
-
-
-
 
 </body>
 </html>
